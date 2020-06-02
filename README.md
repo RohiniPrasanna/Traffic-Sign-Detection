@@ -4,13 +4,6 @@
 This project is a traffic signs detection and classification system on videos using OpenCV.
 The detection phase uses Image Processing techniques that create contours on each video frame and find all ellipses or circles among those contours. They are marked as candidates for traffic signs.
 
-Detection strategy:
-1. Increase the contrast and dynamic range of the video frame
-2. Remove unnecessary colors like green with HSV Color range
-3. Use Laplacian of Gaussian to display border of objects
-4. Make contours by Binarization.
-5. Detect ellipse-like and circle-like contours
-
 The SVM Model is trained each time the ```main.py``` called, before the detection phase but I still save the model in [data_svm.dat](data_svm.dat) to implement the model-reload function in the future to avoid retraining phase.
 
 If a traffic sign is detected, it will be tracked until it disappears or there is another bigger sign in the frame. The tracking method is [Dense Optical Flow](https://docs.opencv.org/trunk/d7/d8b/tutorial_py_lucas_kanade.html).
@@ -32,5 +25,7 @@ Other files:
 ##### b. [Dataset](dataset)
 The [Dataset](dataset) folder contains images for training SVM models. There are 12 folders contains cropped images of traffic signs. Each folder is named as the class of the traffic signs it contains. The special [0](dataset/0) folder contains non-traffic-sign cropped images which can be recognized as traffic signs in the detection phase. 
 ![Wrong detected traffic signs](images/0.png
-### 4. Result
+### 4.  How to run?
+Use default arguments on command prompt: python main.py
+### 5.Result
 ![](images/demo.gif)
