@@ -5,6 +5,9 @@ This project is a traffic signs detection and classification system on videos us
 The detection phase uses Image Processing techniques that create contours on each video frame and find all ellipses or circles among those contours. They are marked as candidates for traffic signs.
 
 The SVM Model is trained each time the ```main.py``` called, before the detection phase but I still save the model in [data_svm.dat](data_svm.dat) to implement the model-reload function in the future to avoid retraining phase.
+This project https://github.com/sruthi720/Traffic_sign_Detection is a traffic signs detection and classification system on videos using OpenCV. Image Processing techniques used here to detect the circles and ellipses on the video by the contures.
+
+
 ### 2. Prerequisites:
 - Python 3.5
 - [OpenCV3](https://opencv.org/)
